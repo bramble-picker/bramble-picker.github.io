@@ -1,0 +1,294 @@
+
+/* index.html stylesheet */
+
+
+/* BOX-SIZING - Specify traditional box sizing,
+ all HTML objects are set to have the box-sizing property */
+* {
+    box-sizing: border-box;
+}
+
+/* get rid of any margin on the viewport */
+body {margin:0;}
+
+/* Implement grid-view for a responsive design */
+/* specify twelve widths that span the entire viewport -
+these act as invisible columns */
+
+/* For mobile phones: */
+[class*="col-"] {
+    float: left;
+    padding: 0px;
+    /*  border: 1px solid red; for testing */
+    width: 100%;
+}
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/* For the unique row 1 config on index page: */
+@media only screen and (min-width: 768px) {
+    .col-i-1 {width: 10%;}
+    .col-i-2 {width: 20%;}
+    .col-i-3 {width: 70%;}
+}
+
+
+/* this allows an element, or row, to span across multiple cols */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+/* LOGO - Logo is next to the left of the navbar on index,
+ else logo on the navbar, on the left */
+.index_logo {
+    float: left;
+    display: block;
+    padding-left: 2em;
+    padding-top: 1em;
+}
+
+.logo {
+    float: left;
+    display: block;
+    padding-top: 1em; 
+    padding-left: 2em;
+}
+
+
+/* NAMES - names and contact info on index, next to logo */
+
+/* TODO: put names in a top to bottom list on desktop,
+and a centered left to right list for mobile screens */
+
+
+.index_names {
+    padding: 5px;
+    padding-top: 19px;
+}
+
+/* For mobile phones: */
+.index_names ul {
+    list-style-type: none;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.index_names li {
+    padding-left: 1em;
+    padding-right: 1em;
+    display: inline-block;
+    text-align: center;
+    font-size: small;
+    font-family: Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* For desktop */
+@media only screen and (min-width: 768px) {
+    .index_names ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .index_names li {
+        padding: 0px;
+        font-size: small;
+        font-family: Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+}
+
+
+
+
+/* NAVIGATION BAR - same on all pages
+fixed position at top with scrollable main section underneath  */
+
+.navbar {
+    background-color: white; /* #333 */
+    text-align: right;
+    overflow: hidden;
+    padding: 5px;
+    padding-right: 25px; /* to match other side */
+}
+
+/* Links/text on the right the navbar */
+.navbar a {
+    float: right;
+    display: block;
+    /* color: #f2f2f2; */
+    color: #333;
+    padding: 14px 16px; /* height, width */
+    text-decoration: none;
+    font-size: small;
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+
+
+
+/* MAIN SECTION - the primary content area under the nav bar
+ and name intro section, it is scrollable */
+.main {
+    margin: 2em;
+    margin-top: 1em;
+    height: 1000px; /* enable scrolling beneath the navbar */
+}
+
+/* Shrink the margins (for academic and art page) */
+.content_margin {
+    text-align: left;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    margin: auto;
+    /* margin-left: 3em;
+     margin-right: 3em; */
+    width: 60%;
+}
+
+/* Shrink the margins (for academic and art page) */
+.content_margin_art {
+    text-align: center;
+    padding-top: 3em;
+    margin: auto;
+    /* margin-left: 3em;
+     margin-right: 3em; */
+    width: 60%;
+}
+
+
+.dummy_col {
+    background: lightgreen;
+    display: inline-block;
+}
+
+
+/* PORTALS for index, choose art or academics  */
+.art_portal {
+    float: left;
+    /* background: lightgreen; just for testing */
+    padding-right: 0px;
+    text-align: center;
+}
+
+.academic_portal {
+    float: right;
+    /* background: lightblue; just for testing */
+    padding-left: 0px;
+    text-align: center;
+}
+
+
+
+
+
+/* Portfolio headings */
+
+.text_titles {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    line-height: 75px;
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+.text_subtitles {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    display: block;
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Table setup for publications, conferences, etc. */
+
+table {
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: small; 
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    text-align: left;
+    padding-top: 12px;
+    padding-right: 8px; 
+}
+
+
+
+
+/* Hay-on-Wye Comics temp website */
+
+.how_title {
+    margin-top: 2em;
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    font-family: arial black, sans-serif;
+}
+
+.how_subtitle {
+    color: black;
+    text-align: center;
+    font-size: 3em;
+    font-family: trebuchet ms, sans-serif;
+    
+}
+
+.how_comingsoon {
+    margin-top: 1em;
+    text-align: center;
+    color: white;
+    font-size: 4em;
+    font-family: brush script mt, cursive;
+}
+
+
+
+
+

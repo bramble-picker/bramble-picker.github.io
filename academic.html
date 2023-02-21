@@ -4,40 +4,59 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="design.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 
 <body>
 
-    <div id="navbar" class="navbar">
-        <!-- <a href="#contact">Contact</a> -->
-        <a href="#Github">Github</a>
-        <a href="hayonwyecomics.com">Hay-On-Wye Comics</a>
-        <a href="art.html">Portfolio</a>
-        <a href="academic.html#Publications">Publications</a>
-        <a href="index.html">Home</a>
-    </div>
+    <div class="row">
+        <div id="navbar" class="col-12 navbar" style="position:fixed;">
+            <div id="logo" class="logo">
+                <a href="index.html" style="padding: 0px"><img src="images/portfolio_images/ProfilePic_jackyBoy9.jpg" width="40" height="40"></a>
+            </div>
+            <a href="#Github">Github</a>
+            <a href="hayonwyecomics.html">Hay-On-Wye Comics</a>
+            <a href="art.html">Portfolio</a>
+            <a href="academic.html#Publications">Publications</a>
+        </div>
+    </div> <!-- end of div class="row" -->
 
         <div id="main" class="main">
 
-            <div id="content_margin_academic" class="content_margin">
+           <div id="content_margin_academic" class="content_margin">
                 
                 
                 <div id="MAT_banner">
-                    <img src="images/QMLogo.jpeg" height=75>
-                    <img src="images/MAT_logo_cropped.png" height=75>
+                    <a href="https://www.qmul.ac.uk/"><img src="images/QMLogo.jpeg" height="75px"></a>
+                        <a href="http://www.mat.qmul.ac.uk"><img src="images/MAT_logo_cropped.png" height="75px" style="margin-left:60px;"></a>
                 </div> <!-- end of div "MAT_banner" -->
 
                 <div id="Research Interests">
                     <span class="text_titles">Research Interests</span>
                     
-                    <p> I'm a PhD researcher interested in comics. The research questions I'm interested in are: Why do comic writers and artists decide to structure their work the way that they do? What sort of decisions do they make in their process of comics creation?</p>
+                    <p> I'm a PhD researcher in the Media and Arts Technology CDT at Queen Mary University of London. My research involves using computational methods to understand fundamental structures of comics. </p>
                     
-                    <p> At the moment, I'm using computational methods to investigate this. I am annotating a comics corpus to demarcate how all space on each comic page is used. Then I'll try to describe how the areas relate to each other using constraint solving methods. </p>
+                    <p> The research questions I'm interested in are: </p>
+                    <ul>
+                        <li>How should units of analysis be defined to effectively study the structure of comics? </li>
+                        <li>Why do comic writers and artists decide to structure their work the way that they do? What sort of decisions do they make in their process of comics creation? </li>
+                        <li>Which theoretial foundations from linguistics have been applied to the study of comics, and is this the best way to approach comics research?
+                        </li>
+                        <li>Can comics structures be modelled adeqautely to successfully generate a novel comic from a script?
+                        </li>
+                        <li>What can comics express that no other medium can express?
+                        </li>
+                        <li>How can comics be used to explain and disseminate current academic research to the wider public?</li>
+                    </ul>
                     
-                    <p> Overall, I would like to better understand how thoughts can manifest in visual sequences, or notations. I have a background in philosophy, sociology, and art practice. I've completed an MA in Language and Cognition at King's College London and an MA in Sociology at Bielefeld University in Germany. </p>
+                    <p> At the moment, I'm developing a general model of common comics structures from corpus analyses. I'll then try to describe how the different parts and structures relate to each other using constraint solving methods. The final model can be used to examine which structures tend to work well, and which do not work so well. </p>
+                    
+                    <p> More generally, I would like to better understand how thoughts can manifest in visual sequences or notations. I have a background in philosophy, sociology, and art practice. I've previously completed an MA in Language and Cognition at King's College London and an MA in Sociology at Bielefeld University in Germany. </p>
+                    
+                    
+                    
                     
                 </div> <!-- end of div "Research Interests" -->
 
@@ -51,7 +70,7 @@
                             <tr>
                                 <td>
                                     Edlin, L. and Reiss, J. (2023 forthcoming).
-                                    Measuring inter-subjective agreement agreement on
+                                    Measuring inter-subjective agreement on
                                     units and attributions in comics with annotation
                                     experiments in Zeitschrift für Semiotik (Journal
                                     of Semiotics): Innovative Methods in Multimodal
@@ -89,7 +108,7 @@
                                     (Poster) “Simulating the no alternatives argument
                                     in a social setting” (August 2018) at the European
                                     Summer School in Logic, Language and Information
-                                    (ESSLLI 2018) Student Session - <i>Best poster award</i>
+                                    (ESSLLI 2018) Student Session - <i><b>Best poster award</b></i>
                                 </td>
                             </tr>
                             <tr>
