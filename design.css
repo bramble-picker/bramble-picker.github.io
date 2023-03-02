@@ -208,14 +208,14 @@ fixed position at top with scrollable main section underneath  */
 .art_portal {
     float: left;
     /* background: lightgreen; just for testing */
-    padding-right: 0px;
+    padding-left: 15%;
     text-align: center;
 }
 
 .academic_portal {
     float: right;
     /* background: lightblue; just for testing */
-    padding-left: 0px;
+    padding-right: 15%;
     text-align: center;
 }
 
