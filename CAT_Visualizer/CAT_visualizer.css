@@ -1,0 +1,289 @@
+
+
+/* CSS script CAT_Visualizer.css */
+
+/* make the background blue*/
+body {
+    background-color: #00BFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* split window, put comic pages on the left side */
+.indent-1 {
+    float: left;
+    margin: 0 1.5%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Comic page canvas container class */
+.canvas_container {
+    position: relative;
+    text-align: center;
+}
+
+/* Canvas */
+canvas {
+    border: 3px solid black;
+    cursor: crosshair;
+    /* There is the option to add the comic images as backgrounds
+     background: url("comicPages/Page1.jpeg"); */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Title */
+#title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    color: #E0FFFF;
+    margin: 100px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Story Selection */
+#story_selector_container {
+    position: relative;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #E0FFFF;
+}
+
+.story_selection_dropdown_menus {
+    background-color: #E0FFFF;
+    margin-left: 20px;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #4682B4;
+    font-weight: bold;
+}
+
+/* Holds the next and previous page buttons, and page counter */
+.page_navigation {
+}
+
+/* The actual page navigation buttons */
+.navigation_buttons {
+    background-color: #4682B4;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #E0FFFF;
+    font-weight: bold;
+}
+
+
+/* Annotation Navigation */
+#annotation_navigation {
+    display: none; 
+}
+
+.annotation_sections {
+    margin-top:2%;
+    text-align: left;
+    font-size: 20px; 
+}
+
+/* Buttons for showing panels, agents, text sections, and setting sections */
+.annotation_button_style {
+    background-color: #4682B4;
+    padding: 8px 16px;
+    border: 1px solid #E0FFFF;
+    border-radius: 8px;
+    color: #E0FFFF;
+    margin: 3px;
+}
+
+/* Buttons for showing ids, refs and attributes */
+.second_level_button_style {
+    background-color: #E0FFFF;
+    padding: 6px 14px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #4682B4;
+    font-size: 12px;
+    margin: 3px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Panels */
+
+/* bounding box panels: */
+#bounding_box_panels_buttons_container {
+    display: block;
+}
+#show_bounding_box_panels_button_container {
+}
+#show_bounding_box_panels_Ids_container {
+}
+
+/* polygon panels: */
+#polygon_panels_buttons_container {
+    display: block;
+}
+#show_polygon_panels_button_container {
+}
+#show_polygon_panels_Ids_container {
+}
+
+
+.show_panel_id_buttons {
+    display: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Agents */
+
+#agents_buttons_container {
+    display: none;
+}
+
+.agent_attributes_container {
+}
+
+.agent_attributes_forms_section {
+    display: none;
+    overflow-y: auto;
+    height: 100px;
+    margin: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.agent_template_panel_form {
+    display: none;
+    padding-left: 8px;
+    border: 1px; solid #4682B4;
+    border-radius: 4px;
+}
+
+.agent_panel_id_num {
+    background-color: #4682B4;
+    width: 50px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #E0FFFF;
+    font-size: 12px;
+}
+
+.agent_template_attribute_form {
+    display: none;
+    padding: 10px;
+}
+
+.agent_individual_attributes {
+    font-size: 12px;
+    color: #4682B4;
+    font-weight: normal;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Text Sections */
+
+#text_sections_buttons_containter {
+    display: none;
+}
+
+.text_section_attributes_form_section {
+    display: none;
+    overflow-y: auto;
+    height: 100px;
+    margin: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.text_section_template_panel_form {
+    display: none;
+    padding-left: 8px;
+    border: 1px; solid #4682B4;
+    border-radius: 4px;
+}
+
+.text_section_panel_id_num {
+    background-color: #4682B4;
+    width: 50px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #E0FFFF;
+    font-size: 12px;
+}
+
+.text_section_template_attribute_form {
+    display: none;
+    padding: 10px;
+}
+
+.text_section_individual_attributes {
+    font-size: 12px;
+    color: #4682B4;
+    font-weight: normal;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Settings */
+
+#show_settings_attributes_button_container {
+}
+
+#settings_attributes_container {
+    display: none;
+}
+
+.settings_attributes_form_section {
+    display: none;
+    overflow-y: auto;
+    height: 100px;
+    margin: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.settings_template_panel_form {
+    display: none;
+    padding-left: 8px;
+    border: 1px; solid #4682B4;
+    border-radius: 4px;
+}
+
+.settings_panel_id_num {
+    background-color: #4682B4;
+    width: 50px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #E0FFFF;
+    font-size: 12px;
+}
+
+.settings_template_attribute_form {
+    display: none;
+    padding: 10px;
+}
+
+.settings_individual_attributes {
+    font-size: 12px;
+    color: #4682B4;
+    font-weight: normal;
+}
+
+
+

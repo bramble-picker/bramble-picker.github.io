@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="CAT_visualizer.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    
+    <section> <!-- CANVAS area (Left side of page) - comic pages go here -->
+        <section id="image_section" class="indent-1">
+            <div id="canvas_container" class="canvas_container">
+                <!-- Canvas element to hold  comic pages
+                 Note: original size was width: 600, height: 700-->
+                <canvas id="canvas" width="650" height="750">
+                    This browser does not support the HTML5 canvas element - sorry!
+                </canvas>
+            </div>
+        </section>
+        
+    <section> <!-- SELECTION area (right side of page)  -->
+        <div id="title">
+            CAT Comics Annotation Visualizer
+            <div>
+        
+        <div id="comic_story_selection">
+            <div id="story_selector_container">
+                <form>
+                    <label>Select a story: </label>
+                    <select id="story_dropdown_by_number" name="story_num_select" class="story_selection_dropdown_menus">
+                        <option value="story00">Number</option>
+                        <option value="story01">1</option>
+                        <option value="story02">2</option>
+                        <option value="story03">3</option>
+                        <option value="story04">4</option>
+                        <option value="story05">5</option>
+                        <option value="story06">6</option>
+                        <option value="story07">7</option>
+                        <option value="story08">8</option>
+                        <option value="story09">9</option>
+                        <option value="story10">10</option>
+                        <option value="story11">11</option>
+                        <option value="story12">12</option>
+                        <option value="story13">13</option>
+                        <option value="story14">14</option>
+                        <option value="story15">15</option>
+                        <option value="story16">16</option>
+                        <option value="story17">17</option>
+                        <option value="story18">18</option>
+                        <option value="story19">19</option>
+                        <option value="story20">20</option>
+                        <option value="story21">21</option>
+                        <option value="story22">22</option>
+                        <option value="story23">23</option>
+                        <option value="story24">24</option>
+                        <option value="story25">25</option>
+                        <option value="story26">26</option>
+                        <option value="story27">27</option>
+                        <option value="story28">28</option>
+                        <option value="story29">29</option>
+                        <option value="story30">30</option>
+                        <option value="story31">31</option>
+                        </select>
+                    </form>
+               <form>
+                   <label> </label>
+                   <select id="story_dropdown_by_title" name="story_title_select" class="story_selection_dropdown_menus" style="margin-top:5px;">
+                       <option value="story00">Title</option>
+                       <option value="story01">The Cadmus Seed!</option>
+                       <option value="story02">The Fourth Dimension is a Many Splattered Thing!</option>
+                       <option value="story03">My Robot Plants</option>
+                       <option value="story04">The Man Who Never Lived</option>
+                       <option value="story05">Logan's Next Life!</option>
+                       <option value="story06">The Last Enemy!</option>
+                       <option value="story07">Donnegan's Daffy Chair</option>
+                       <option value="story08">This World is Ours!</option>
+                       <option value="story09">They Walked on Water!</option>
+                       <option value="story10">Get Lost!</option>
+                       <option value="story11">The Strange One</option>
+                       <option value="story12">Half Man-Half What</option>
+                       <option value="story13">Defeat!</option>
+                       <option value="story14">The Fountain of Age</option>
+                       <option value="story15">12,000 to 1!</option>
+                       <option value="story16">Hole in the Wall</option>
+                       <option value="story17">The Hero</option>
+                       <option value="story18">The Big Hunt</option>
+                       <option value="story19">The Fireballs!</option>
+                       <option value="story20">I Want to be a Man!</option>
+                       <option value="story21">Ambassador From Venus</option>
+                       <option value="story22">Moon Descent</option>
+                       <option value="story23">Who Knows?</option>
+                       <option value="story24">The Emotion Maker</option>
+                       <option value="story25">King of the Ants</option>
+                       <option value="story26">The Strange Power of Gary Ford</option>
+                       <option value="story27">Forbidden Journey!</option>
+                       <option value="story28">Secret Weapon</option>
+                       <option value="story29">The Monster From 1977 A.D.</option>
+                       <option value="story30">The End of a Sinister Man</option>
+                       <option value="story31">The Feast of the Rag Dolls</option>
+                       </select>
+                   </form>
+                </div> <!-- "story_selector_container" -->
+            </div> <!-- "comic_story_selection" -->
+        
+        <div id="annotation_navigation">
+        
+            <!-- Pages -->
+            <div id="page_navigation" class="page_navigation">
+                <button id="previous_page_button" class="navigation_buttons">Previous Page</button>
+                <button id="next_page_button" class="navigation_buttons">Next Page</button>
+                <button id="page_counter" class="navigation_buttons">Page x of x</button>
+                </div>
+            
+            <!-- Panels -->
+            <div id="panel_section" class="annotation_sections">
+                <div id="panels_title">Panels</div>
+                <div id="panels_navigation">
+                    <div id="bounding_box_panels_buttons_container">
+                        <div id="show_bounding_box_panels_button_container">
+                            <button id="show_bounding_box_panels_button" class="annotation_button_style">Show Bounding Box Panels</button>
+                            </div> <!-- show_bounding_box_panels_button -->
+                        <div id="show_bounding_box_panels_Ids_container">
+                            <button id="show_bounding_box_panels_Ids" class="show_panel_id_buttons second_level_button_style">Show IDs</button>
+                            </div>
+                        </div> <!-- bounding_box_panels_buttons_container -->
+                    
+                    <div id="polygon_panels_buttons_container">
+                        <div id="show_polygon_panels_button_container">
+                            <button id="show_polygon_panels_button" class="annotation_button_style">Show Polygon Panels</button>
+                            </div> <!-- show_polygon_panels_button -->
+                        <div id="show_polygon_panels_Ids_container">
+                            <button id="show_polygon_panels_Ids" class="show_panel_id_buttons second_level_button_style">Show IDs</button>
+                            </div> <!-- show_polygon_panels_Ids_container -->
+                        </div> <!-- polygon_panels_buttons_container -->
+                    </div> <!-- end of "panels_navigation" -->
+                </div> <!-- end of "panel_section" -->
+            
+            <!-- Agents -->
+            <div id="agents_section" class="annotation_sections">
+                <div id="agents_title">Agents</div>
+                <div id="agents_navigation">
+                        <div id="show_polygon_agents_buttons_container">
+                            <button id="show_polygon_agents_button" class="annotation_button_style"> Show Agents</button>
+                            </div> <!-- end of "show_polygon_agents_buttons_container" -->
+                        <div id="agents_buttons_container">
+                            <button id="agents_show_ids_button" class="second_level_button_style">Show IDs</button>
+                            <button id="agents_show_refs_button" class="second_level_button_style">Show Referents</button>
+                            <button id="agents_show_attributes_button" class="second_level_button_style">Show Attributes</button>
+                            </div> <!-- end of "agents_buttons_container" -->
+                    </div> <!-- end of "agents_navigation" -->
+                
+                <div id="agent_attributes_container" class="agent_attributes_container">
+                    <div id="agent_attributes_forms_section" class="agent_attributes_forms_section">
+                        
+                        <div id="agent_template_panel_form" class="agent_template_panel_form">
+                            <div id="agent_panel_id_num" class="agent_panel_id_num">
+                                Panel num: </div>
+                            </div> <!-- end of "agent_template_panel_form" -->
+                        
+                        <div id="agent_template_attribute_form" class="agent_template_attribute_form">
+                            <div id="agent_id_num" class="agent_individual_attributes">
+                                Id num: </div>
+                            <div id="agent_referent" class="agent_individual_attributes">
+                                Referent: </div>
+                            <div id="agent_introduced_coreferent" class="agent_individual_attributes">
+                                Introduced Coreferent: </div>
+                            <div id="agent_animacy_type" class="agent_individual_attributes">
+                                Animacy Type: </div>
+                            </div> <!-- end of "agent_template_attribute_form" -->
+                        
+                        </div> <!-- end of "agent_attributes_forms_section" -->
+                    </div> <!-- end of "agent_attributes_container"-->
+                </div> <!-- end of "agents_section" -->
+            
+            <!-- Text Sections -->
+            <div id="text_sections_section" class="annotation_sections">
+                <div id="text_sections_title">Text Sections</div>
+                <div id="text_section_navigation">
+                    <div id="show_text_sections_buttons_container">
+                        <button id="show_text_sections_button" class="annotation_button_style">Show Text Sections</button>
+                        </div> <!-- end of "show_text_sections_buttons_container"-->
+                    <div id="text_sections_buttons_containter">
+                        <button id="text_sections_show_ids_button" class="second_level_button_style">Show IDs</button>
+                        <button id="text_sections_show_attributes_button" class="second_level_button_style">Show Attributes</button>
+                        </div> <!-- end of "text_sections_buttons_containter" -->
+                    </div> <!-- end of  "text_section_navigation" -->
+                
+                <div id="text_sections_attribute_container">
+                    <div id="text_section_attributes_form_section" class="text_section_attributes_form_section">
+                        
+                        <div id="text_section_template_panel_form" class="text_section_template_panel_form">
+                            <div id="text_section_panel_id_num" class="text_section_panel_id_num">
+                                Panel num: </div>
+                            </div> <!-- text_section_template_panel_form" -->
+                        
+                        <div id="text_section_template_attribute_form" class="text_section_template_attribute_form">
+                            <div id="text_section_id_num" class="text_section_individual_attributes">
+                                Id num: </div>
+                            <div id="text_section_type" class="text_section_individual_attributes">
+                                Type: </div>
+                            <div id="text_section_speaker_referent" class="text_section_individual_attributes">
+                                Speaker:</div>
+                            </div> <!-- "text_section_template_attribute_form" -->
+                        
+                        </div> <!-- end of "text_section_attributes_form_section" -->
+                    </div> <!-- end of "text_sections_attribute_container"-->
+                
+                </div> <!-- end of "text_sections_section" -->
+            
+            <!-- Settings -->
+            <div id="settings_section" class="annotation_sections">
+                <div id="settings_title"> Settings</div>
+                <div id="settings_navigation">
+                    <div id="show_settings_attributes_button_container">
+                        <button id="show_settings_attributes_button" class="second_level_button_style">Show Attributes</button>
+                        </div>
+                    </div> <!-- end of settings_navigation -->
+                
+                <div id="settings_attributes_container">
+                    <div id="settings_attributes_form_section"
+                        class="settings_attributes_form_section">
+                        
+                        <div id="settings_template_panel_form">
+                            <div id="settings_panel_id_num"
+                                class="settings_panel_id_num">
+                                </div>
+                            </div> <!-- settings_template_panel_form" -->
+                        
+                        <div id="settings_template_attribute_form"
+                            class="settings_template_attribute_form">
+                            <div id="settings_location_referent" class="settings_individual_attributes">
+                                Location Referent:
+                                </div>
+                            <div id="settings_location_information_amount_ordinal" class="settings_individual_attributes">
+                                Location Information Amount (ordinal):
+                                </div>
+                            <div id="settings_location_information_amount_binary" class="settings_individual_attributes">
+                                Location Information Amount (binary):
+                                </div>
+                            </div> <!-- settings_template_attribute_form -->
+                        
+                        </div> <!-- end of settings_attributes_form_section -->
+                    </div> <!-- end of settings_attributes_container -->
+                
+                </div> <!-- end of setting_section -->
+            
+            
+            
+            </div> <!-- end of "annotation_navigation" -->
+        
+        </section> <!-- end of SELECTION area (right side of page)  -->
+        
+
+    
+    <script type="text/javascript" src="CAT_visualizer.js"></script>
+ 
+</body>
+
+
+</html>
